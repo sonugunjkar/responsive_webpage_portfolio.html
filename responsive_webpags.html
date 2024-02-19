@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Personal Portfolio Website</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+        /*		global variables*/
+        :root{
+        	--hFont: 'Poppins', sans-serif;
+        	--pFont: 'DM Sans', sans-serif;
+        	--themeColor: #2A7E60;
+        	--bgColor: #191D2B;
+        	--color: rgb(214, 213, 213);
+        }
+
+        /*        Home Section*/
+
+        #home{
+        	background-color: var(--bgColor);
+        	position: relative;
+        }
+
+        #home::before{
+        	content: '';
+        	width: 20%;
+        	height: 100%;
+        	background-color: var(--themeColor);
+        	position: absolute;
+        	top: 0;
+        	left: 0;
+        	border-bottom-right-radius: 20px;
+
+        }
+
+        .container{
+        	padding: 50px 5%;
+        }
+
+        #home .home-cols{
+        	display: flex;
+        	justify-content: space-between;
+        	align-items: center;
+        	gap: 70px;
+        	position: relative;
+        }
+
+        #home .home-img-col img{
+        	background-color: black;
+        	border-radius: 15px;
+        	filter: grayscale(100%);
+        	transition: 1s;
+            max-height: 650px;
+            max-width: 500px;
+        }
+
+
+        #home .home-img-col img:hover{
+        	filter: grayscale(0);
+        }
+
+        #home .home-cols .home-info-col{
+        	padding-right: 40px;
+
+        }
+        #home .home-cols .home-info-col h1{
+        	color: white;
+        	font-family: var(--hFont);
+        	font-size: 53px;
+        	font-weight: 700;
+
+        }
+        #home .home-cols .home-info-col h1 span{
+        	color: var(--themeColor);
+        }
+        #home .home-cols .home-info-col p{
+        	color: var(--color);
+        	font-family: var(--pFont);
+        	font-size: 16px;
+        	letter-spacing: 0.5px;
+        	font-weight: 400;
+        	margin-top: 10px;
+
+        }
+        #home .home-cols .home-info-col a{
+        	display: inline-block;
+        	margin-top: 25px;
+        	text-decoration: none;
+        	color: var(--color);
+        	font-family: var(--pFont);
+        	font-size: 17px;
+        	font-weight: 500;
+        	padding: 9px 0;
+        	padding-left: 20px;
+        	width: 190px;
+        	border: 2px solid var(--themeColor);
+        	border-radius: 25px;
+        	position: relative;
+        	transition: 0.3s;
+
+        }
+
+        #home .home-cols .home-info-col a:hover{
+        	background-color: var(--themeColor);
+        }
+
+        #home .home-cols .home-info-col a i{
+        	position: absolute;
+        	right: -1px;
+        	top: -1px;
+        	background-color: var(--themeColor);
+        	padding: 10px;
+        	border-radius: 50%;
+        	border: 2px solid var(--themeColor);
+        }
+
+        #home .home-cols .home-menu-col .menu-item{
+        	margin: 25px 0;
+        	position: relative;
+
+        }
+
+        #home .home-cols .home-menu-col .menu-item span{
+        	background-color: rgba(0, 0, 0, 0.678);
+        	color: white;
+        	font-family: var(--pFont);
+        	font-weight: 400;
+        	font-size: 15px;
+        	padding: 10px 0;
+        	width: 120px;
+        	text-align: center;
+        	position: absolute;
+        	top: 10px;
+        	left: -120px;
+        	border-bottom-right-radius: 20px;
+        	border-bottom-left-radius: 20px;
+        	opacity: 0;
+        	transition: 0.5s;
+        }
+
+        #home .home-cols .home-menu-col .menu-item:hover span{
+        	opacity: 1;
+        }
+
+        #home .home-cols .home-menu-col .menu-item a{
+        	text-decoration: none;
+        	background-color: rgb(51, 51, 51);
+        	color: rgb(169, 169, 169);
+        	font-size: 25px;
+        	height: 60px;
+        	width: 60px;
+        	border-radius: 50%;
+        	display: inline-block;
+        	line-height: 60px;
+        	transition: 0.4s;
+        	text-align: center;
+        }
+
+        #home .home-cols .home-menu-col .menu-item a:hover{
+        	background-color: var(--themeColor);
+        	color: whitesmoke;
+        }
+
+        #home .home-cols .home-menu-col .menu-item .active{
+        	background-color: var(--themeColor);
+        	color: whitesmoke;
+        }
+
+        /*        Mobileview*/
+        @media only screen and (max-width: 985px){
+        	#home .home-cols .home-menu-col{
+        		display: flex;
+        		flex-direction: row;
+        		justify-content: center;
+        		align-items: center;
+        		position: fixed;
+        		bottom: 0;
+        		left: 0;
+        		width: 100%;
+        		position: 20px;
+        		background-color: rgba(0, 0, 0, 0.678);
+        		margin: 0;
+        		z-index: 5;
+
+        	}
+
+        	#home .home-cols .home-info-col .menu-item{
+        		margin: 0 10px;
+        		position: relative;
+
+        	}
+
+        	#home .home-cols .home-info-col .menu-item a{
+        		background-color: var(--themeColor);
+        		color: white;
+        		width: 40px;
+        		height: 40px;
+        		font-size: 18px;
+        		line-height: 40px;
+        	}
+
+        	#home .home-cols .home-info-col .menu-item span{
+        		top: -40px;
+        		left: -50px;
+        		transition: 0.5s;
+        		background-color: var(--themeColor);
+
+        	}
+        }
+
+        @media only screen and (max-width: 830px){
+            #home .home-img-col img{
+                max-height: 450px;
+                max-width: 300px;
+            }
+        	#home::before{
+        		width: 0;
+        	}
+        	#home .container{
+        		padding: 50px 4%;
+        	}
+        	#home .home-cols{
+        		flex-direction: column-reverse;
+        		gap: 30px;
+        	}
+
+        	#home .home-cols .home-info-col{
+        		text-align: center;
+        		padding: 0;
+        	}
+
+        	#home .home-cols .home-info-col h1{
+        		font-size: 35px;
+        	}
+        	#home .home-cols .home-info-col h1 br{
+        		display: none;
+
+        	}
+        	#home .home-cols .home-info-col a{
+        		width: 230px;
+        		padding-left: 0;
+        		text-align: center;
+        	}
+
+        	#home .home-cols .home-info-col img{
+        		background-color: rgb(0, 0, 0);
+        		width: 100%;
+        	}
+        }
+/*        /Home section end/*/
+
+
+/*        /About section start/*/
+
+        #about{
+        	background-color: var(--bgColor);
+        	padding: 30px 1%;
+        	position: relative;
+        }
+
+        #about::after{
+        	content: '';
+        	width: 30%;
+        	height: 1px;
+        	background-color: lightslategray;
+        	position: absolute;
+        	bottom: 0;
+        	left:35%;
+        }
+
+        #about h1{
+        	font-family: var(--hFont);
+        	color: white;
+        	text-align: center;
+        	font-size: 48px;
+        	text-transform: uppercase;
+        	letter-spacing: 0.5px;
+        	text-shadow: 0 0 40px rgba(0, 0, 0, 0.555);
+        }
+
+        #about h1 span{
+        	color: var(--themeColor);
+        }
+
+        #about .about-cols{
+        	display: flex;
+        	align-items: center;
+        	justify-content: space-between;
+        	gap: 70px;
+        	margin-top: 50px;
+        }
+
+        #about .about-cols .about-left-col{
+        	flex-basis: 50%;
+        }
+
+        #about .about-cols .about-left-col h2{
+        	font-family: var(--hFont);
+        	color: white;
+        	text-transform: capitalize;
+        	font-size: 30px;
+        	font-weight: 600;
+        	margin-bottom: 15px;
+        }
+
+        #about .about-cols .about-left-col p{
+        	font-family: var(--pFont);
+        	color: var(--color);
+        	font-size: 15px;
+        	letter-spacing: 0.5px;
+        	font-weight: 400;
+        	margin-bottom: 15px;
+        }
+
+        #about .about-cols .about-left-col a{
+        	display: inline-block;
+        	text-decoration: none;
+        	color: var(--color);
+        	border: 2px solid var(--themeColor);
+        	padding: 7px 25px;
+        	font-family: var(--pFont);
+        	font-size: 16px;
+        	font-weight: 500;
+        	letter-spacing: 0.5px;
+        	margin-top: 15px;
+        	border-radius: 4px;
+        	border-bottom-right-radius: 0;
+        	background-color: var(--themeColor);
+        }
+
+        #about .about-cols .about-left-col a:hover  i{
+        	transform: translateX(5px);
+        }
+
+        #about .about-cols .about-left-col  a i{
+        	background-color: #48dd85;
+        	padding: 6px 10px;
+        	border-radius: 4px;
+        	margin-left: 10px;
+        	transition: 0.5s;
+        }
+
+        #about .about-cols .about-right-col{
+        	flex-basis: 50%;
+        	display: grid;
+        	grid-template-columns: repeat(2, 1fr);
+        	grid-gap: 2rem;
+        	padding: 0 50px;
+        }
+
+
+        #about .about-cols .about-right-col .about-box{
+        	border: 1px solid rgb(56, 55, 55);
+        	height: 200px;
+        	border-radius: 3px;
+        	padding: 30px;
+        	transition: 0.6s;
+        }
+
+        #about .about-cols .about-right-col .about-box h2{
+        	font-size: 45px;
+        	font-family: var(--hFont);
+        	color: var(--themeColor);
+        	font-weight: 800;
+        }
+
+        #about .about-cols .about-right-col .about-box p{
+        	font-family: var(--pFont);
+        	color: white;
+        	font-size: 20px;
+        	text-transform: uppercase;
+        	letter-spacing: 1px;
+
+        }
+
+        #about .about-cols .about-right-col .about-box:hover{
+        	border: 1px solid var(--themeColor);
+        	transform: translateY(-7px);
+        	box-shadow: 0 0px 50px rgba(0, 0, 0, 0.472);
+        }
+
+
+/*        /mobile view/*/
+        @media only screen and (max-width: 950px)
+        {
+        	#about .about-cols{
+        		gap: 40px;
+        		flex-direction: column;
+        	}
+        	#about .about-cols .about-right-col{
+                grid-template-columns: repeat(1, 1fr);
+        		grid-gap: 1rem;
+        		padding: 0;
+        	}
+        }
+
+        @media only screen and (max-width: 400px){
+        	#about .about-cols .about-right-col{
+        		grid-template-columns: repeat(1, 1fr);
+        	}
+        }
+
+
+        #skill{
+        	background-color: var(--bgColor);
+        	padding: 30px 1%;
+        	position: relative;
+        }
+
+        #skill::after{
+        	content: '';
+        	width: 30%;
+        	height: 1px;
+        	background-color: lightslategray;
+        	position: absolute;
+        	bottom: 0;
+        	left: 35%;
+        }
+
+        .sub-title{
+        	text-align: center;
+        	font-family: var(--hFont);
+        	font-size: 35px;
+        	font-weight: 700;
+        	color: white;
+        	text-shadow: 0 0 20px rgba(0, 0, 0, 0.537);
+        	text-transform: uppercase;
+        }
+        .sub-title span{
+        	color: var(--themeColor);
+        }
+
+        #skill .skill-cols{
+        	display: grid;
+        	grid-template-columns: repeat(2, 1fr);
+        	grid-gap: 50px;
+        	margin-top: 70px;	
+        }
+
+        /*#skill .skill-cols .skill-item{
+            border: 1px solid white;
+        }*/
+
+        #skill .skill-cols .skill-item .skill-name-per{
+        	display: flex;
+        	align-items: center;
+        	justify-content: space-between;
+
+        }
+        #skill .skill-cols .skill-item .skill-name-per h2{
+        	color: var(--color);
+        	font-family: var(--pFont);
+        	font-weight: 700;
+        	font-style: italic;
+        	font-size: 19px;
+        }
+
+
+        #skill .skill-cols .skill-item .skill-outer-bar{
+        	width: 100%;
+        	height: 8px;
+        	background-color: rgb(46, 45, 45);
+        	margin-top: 10px;
+        }
+
+        #skill .skill-cols .skill-item .skill-outer-bar .skill-inner-bar{
+        	background-color: var(--themeColor);
+            height: 8px;
+        }
+/*        /mobile view/*/
+        @media only screen and (max-width: 800px){
+        	#skill .skill-cols{
+            
+        		grid-template-columns: repeat(1, 1fr);
+        		grid-gap: 30px;
+        	}
+        }
+        /*        skill section end*/
+/*        /portfolio section start/*/
+
+
+        #portfolio{
+        	background-color: var(--bgColor);
+        	padding: 30px 7%;
+        	position: relative;
+
+        }
+
+        #portfolio::after{
+        	content: '';
+        	width: 30%;
+        	height: 1px;
+        	background-color: lightslategray;
+        	position: absolute;
+        	bottom: 0;
+        	left: 35%;
+
+        }
+
+        #portfolio p{
+        	font-family: var(--pFont);
+        	font-weight: 400;
+        	color: var(--color);
+        	font-size: 17px;
+        	letter-spacing: 0.6px;
+        	text-align: center;
+        	margin-top: 15px;
+        }
+
+        #portfolio .portfolio-grid{
+        	display: grid;
+        	grid-template-columns: repeat(3, 1fr);
+        	grid-gap: 2.4rem;
+        	margin-top: 70x;
+        }
+        #portfolio .portfolio-grid .portfolio-item{
+        	position: relative;
+        	border-radius: 15px;
+        }
+        #portfolio .portfolio-grid .portfolio-item .port-img-box img{
+        	width: 100%;
+        	height: 300px;
+        	border-radius: 15px;
+        }
+
+        #portfolio .portfolio-grid .portfolio-item .port-img-info{
+        	width: 100%;
+        	height: 100%;
+        	background-color: var(--themeColor);
+        	border-radius: 15px;
+        	display: flex;
+        	flex-direction: column;
+        	justify-content: center;
+        	align-items: center;
+        	position: absolute;
+        	top: 0;
+        	left: 0;
+        	gap: 20px;
+        	opacity: 0;
+        	transition: 0.4s;
+        	transform: scale(0);
+        }
+
+        #portfolio .portfolio-grid .portfolio-item:hover .port-img-info{
+        	opacity: 1;
+        	transform: scale(1.0);
+        }
+
+        #portfolio .portfolio-grid .portfolio-item .port-img-info h2{
+        	font-family: var(--hFont);
+        	font-size: 30px;
+        	font-weight: 600;
+        	color: white;
+        }
+
+        #portfolio .portfolio-grid .portfolio-item .port-img-info a{
+        	background-color: var(--bgColor);
+        	color: white;
+        	font-size: 20px;
+        	padding: 14px 15px;
+            border-radius: 50%;
+        }
+        /*        mobile videw*/
+        @media only screen and (max-width: 975px){
+        	#portfolio .portfolio-grid{
+        		grid-template-columns: repeat(2, 1fr);
+        		grid-gap: 2rem;
+        	}
+        }
+
+        @media only screen and (max-width: 630px){
+        	#portfolio .portfolio-grid{
+        		grid-template-columns: repeat(1, 1fr);
+        		grid-gap: 2rem;
+        	}
+        }
+
+        /* service section*/
+        #service{
+        	background-color: var(--bgColor);
+        	padding: 30px 7%;
+        	position: relative;
+        }
+
+        #service::after{
+        	content: '';
+        	width: 30%;
+        	height: 1px;
+        	background-color: lightslategray;
+        	position: absolute;
+        	bottom: 0;
+        	left: 35%;
+        }
+
+        #service .service-grid{
+        	display: grid;
+        	grid-template-columns: repeat(3, 1fr);
+        	grid-gap: 2.4rem;
+        	margin-top: 70px;
+        }
+
+        #service .service-grid .service-item{
+        	text-align: center;
+        	padding: 50px 20px;
+        	box-shadow: 0 0 20px rgba(0, 0, 0, 0.472);
+        	border-radius: 7px;
+        	display: flex;
+        	flex-direction: column;
+        	justify-content: center;
+        	align-items: center;
+        	gap: 20px;
+        	transition: 0.7s;
+        }
+
+        #service .service-grid .service-item i{
+        	background-color: var(--themeColor);
+        	color: white;
+        	width: 60px;
+        	height: 60px;
+        	text-align: center;
+        	line-height: 60px;
+        	font-size: 32px;
+        	margin-bottom: 10px;
+        	border-radius: 20px;
+        	border-bottom-right-radius: 0;
+        	transition: 0.5s;
+        }
+
+        #service .service-grid .service-item h2{
+        	color: white;
+        	font-family: var(--hFont);
+        	font-size: 25px;
+        	font-weight: 500;
+        	letter-spacing: 0.3px;
+        }
+        #service .service-grid .service-item p{
+        	font-family: var(--hFont);
+        	color: var(--color);
+
+        	font-size: 14px;
+        	font-weight: 400;
+        	letter-spacing: 0.6px;
+
+        }
+
+        #service .service-grid .service-item:hover{
+        	background-color: var(--themeColor);
+        }
+
+        #service .service-grid .service-item:hover i{
+        	background-color: white;
+        	color: var(--themeColor);
+        }
+
+        @media only screen and (max-width: 800px){
+            #service .service-grid{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        }
+        /*Service section end*/
+        /*Contact section start*/
+
+        #contact{
+            background-color: var(--bgColor);
+            padding: 30px 7%;
+            position: relative;
+        }
+
+        #contact .contact-cols{
+            margin-top: 60px; 
+        }
+
+        #contact .contact-cols .con-top-col{
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+            grid-gap: 2.4rem;
+            margin-top: 70px;
+        }
+
+        #contact .contact-cols .con-top-col .con-item{
+            text-align: center;
+            padding: 50px 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.472);
+            border-radius: 7px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            transition: 0.7s;
+        }
+
+        #contact .contact-cols .con-top-col .con-item i{
+            background-color: var(--themeColor);
+            color: white;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 32px;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            border-bottom-right-radius: 0;
+            transition: 0.5s;
+        }
+
+        #contact .contact-cols .con-top-col .con-item h2{
+            color: white;
+            font-family: var(--hFont);
+            font-size: 25px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            font-style: italic;
+
+        }
+
+        #contact .contact-cols .con-top-col .con-item p{
+            font-family: var(--pFont);
+            color: var(--color);
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.6px;
+            font-style: italic;
+        }
+
+        #contact .contact-cols .con-bottom-col form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 100px;
+        }
+        #contact .contact-cols .con-bottom-col form input, #contact .contact-cols .con-bottom-col form textarea{
+            width: 50%;
+            font-family: var(--pFont);
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-weight: 400;
+            color: var(--color);
+            background-color: #0000004f;
+            border: 2px solid lightgray;
+            padding: 7px 20px;
+            border-radius: 2px;
+            outline: none;
+            transition: 0.4s;
+            resize: none;   
+        }
+
+        #contact .contact-cols .con-bottom-col form input[type=submit]:hover{
+            background-color: var(--themeColor);
+            cursor: pointer;
+            color: white;
+            border: 2px solid var(--themeColor);
+        }
+
+        /*mobile view*/
+        @media only screen and (max-width: 850px){
+            #contact .contact-cols .con-bottom-col form input, #contact .contact-cols .con-bottom-col form textarea{
+                width: 100%;
+
+            }
+        }
+
+        #footer{
+            text-align: center;
+            background-color: var(--themeColor);
+            padding: 20px;
+        }
+        #footer p{
+            font-family: var(--hFont);
+            color: white;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            font-size: 15px;
+            font-style: italic;
+
+        }
+
+
+	</style>
+</head>
+<body>
+	<!-- Home Section start -->
+	<section id="home">
+		<div class="container">
+			<div class="home-cols">
+				<!-- img col -->
+				<div class="home-img-col">
+					<img src="https://th.bing.com/th/id/OIP.bAnoZrpwhX6IOabcU0JBsQHaKL?w=745&h=1024&rs=1&pid=ImgDetMain" alt="image is unavailable">
+				</div>
+				<!-- Center col -->
+				<div class="home-info-col">
+					<h1>Hi, This is <span>SKG.</span><br>A Front-End Developer</h1>
+					<p>I am a web developer. I love to create functionla beautiful websites. Lorem ipsum dolor sit, amet consectetur adipisicing elit. repellat eos aut rem quisquam, cupiditate nostrum est deserunt eligendi quasi? </p>
+					<a href="#">Download Cv <i class="fa-solid fa-download"></i> </a>
+
+				</div>
+				<!-- menu col -->
+				<div class="home-menu-col">
+					<div class="menu-item">
+						<span>Home</span>
+						<a href="#" class="active">
+							<i class="fa-solid fa-house-chimney-user"></i>
+						</a>
+					</div>
+					<div class="menu-item">
+						<span>About Me</span>
+						<a href="#">
+							<i class="fa-solid fa-user"></i>
+						</a>
+					</div>
+					<div class="menu-item">
+						<span>My work</span>
+						<a href="#">
+							<i class="fa-solid fa-briefcase"></i>
+						</a>
+					</div>
+					<div class="menu-item">
+						<span>My Services</span>
+						<a href="#">
+							<i class="fa-brand fa-servicestack"></i>
+						</a>
+					</div>
+					<div class="menu-item">
+						<span>Contact ME</span>
+						<a href="#">
+							<i class="fa-solid fa-id-card-clip"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Home section end -->
+
+	<!-- About section start -->
+	<section id="about">
+		<div class="container">
+			<h1>About <span>me</span></h1>
+			<div class="about-cols">
+				<div class="about-left-col">
+					<h2>information about me</h2>
+					<p>
+						Lorem ipsum dolor sit, amet consectur adipisicing elit. Consectetur aliquid eius natus doloremque omnis odit eveniet similique amet laboriosam, enim id quas, assumenda, modi perferendis voluptate praesentium est itaque!
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Alis perspiciatis quidem qui, repudiandae reiciendis aspriam quam! Hic suscipit praesentium molestias repudiandae, architecto error illum sit asperiam ar, doloribus dignissimos dolores!
+					</p>
+					<a href="#">Hire me<i class="fa-solid fa-angles-right"></a>
+				</div>
+				<div class="about-right-col">
+					<div class="about-box">
+						<h2>40+</h2>
+						<p>Projects completed</p>
+					</div>
+					<div class="about-box">
+						<h2>4+</h2>
+						<p>Years of experience</p>
+					</div>
+					<div class="about-box">
+						<h2>35+</h2>
+						<p>Happy Clients</p>
+					</div>
+					<div class="about-box">
+						<h2>25+</h2>
+						<p>Costumer Review</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- skill section start -->
+	<section id="skill">
+		<div class="container">
+			<h3 class="sub-title"><span>my</span> Skills</h3>
+            <div class="skill-cols">
+                <!-- skill 1 -->
+                <div class="skill-item">
+                    <div class="skill-name-per">
+                        <h2>HTML5</h2>
+                        <h2>80%</h2>
+                    </div>
+                    <div class="skill-outer-bar">
+                        <div class="skill-inner-bar" style="width:80%"></div>
+                    </div>
+                </div>
+                <!-- skill 2 -->
+                <div class="skill-item">
+                    <div class="skill-name-per">
+                        <h2>CSS3</h2>
+                        <h2>80%</h2>
+                    </div>
+                    <div class="skill-outer-bar">
+                        <div class="skill-inner-bar" style="width:80%"></div>
+                    </div>
+                </div>
+                <!-- skill 3 -->
+                <div class="skill-item">
+                    <div class="skill-name-per">
+                        <h2>javascript</h2>
+                        <h2>55%</h2>
+                    </div>
+                    <div class="skill-outer-bar">
+                        <div class="skill-inner-bar" style="width:55%"></div>
+                    </div>
+                </div>
+                <!-- skill 4 -->
+                <div class="skill-item">
+                    <div class="skill-name-per">
+                        <h2>wordpress</h2>
+                        <h2>85%</h2>
+                    </div>
+                    <div class="skill-outer-bar">
+                        <div class="skill-inner-bar" style="width:85%"></div>
+                    </div>
+                </div>
+                <!-- skill 5 -->
+                <div class="skill-item">
+                    <div class="skill-name-per">
+                        <h2>Python</h2>
+                        <h2>70%</h2>
+                    </div>
+                    <div class="skill-outer-bar">
+                        <div class="skill-inner-bar" style="width:70%"></div>
+                    </div>
+                </div>
+                <!-- skill 6 -->
+                <div class="skill-item">
+                    <div class="skill-name-per">
+                        <h2>Node js</h2>
+                        <h2>85%</h2>
+                    </div>
+                    <div class="skill-outer-bar">
+                        <div class="skill-inner-bar" style="width:85%"></div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</section>
+
+	<!-- skill section end -->
+
+
+	<section id="portfolio">
+		<div class="container">
+			<<h3 class="sub-title">My <span>Portfolio</span></h3>
+			<p>Here is some my work that i have done in various programming langiuuages.</p>
+			<div class="portfolio-grid">
+
+				<!-- image 1 -->
+
+				<div class="portfolio-item">
+					<div class="port-img-box">
+						<img src="https://th.bing.com/th?id=OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="...">
+					</div>
+					<div class="port-img-info">
+						<h2>View project</h2>
+						<a href="#">
+							<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						</a>
+					</div>
+				</div>
+				<!-- image 2 -->
+
+				<div class="portfolio-item">
+					<div class="port-img-box">
+						<img src="https://th.bing.com/th?id=OIP.roeJGz3eeyhxK3XRQ0LxpQHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="...">
+					</div>
+					<div class="port-img-info">
+						<h2>View project</h2>
+						<a href="#">
+							<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						</a>
+					</div>
+				</div>
+				<!-- image 3 -->
+
+				<div class="portfolio-item">
+					<div class="port-img-box">
+						<img src="https://th.bing.com/th?id=OIP.m4FmOjk0Bx-N4JaBzsBoTgHaEP&w=330&h=189&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="...">
+					</div>
+					<div class="port-img-info">
+						<h2>View project</h2>
+						<a href="#">
+							<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						</a>
+					</div>
+				</div>
+				<!-- image 4 -->
+
+				<div class="portfolio-item">
+					<div class="port-img-box">
+						<img src="https://th.bing.com/th?id=OIP.3MxqaJv2Z5QsG7wIXzizjAHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="...">
+					</div>
+					<div class="port-img-info">
+						<h2>View project</h2>
+						<a href="#">
+							<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						</a>
+					</div>
+				</div>
+				<!-- image 5 -->
+
+				<div class="portfolio-item">
+					<div class="port-img-box">
+						<img src="https://th.bing.com/th?id=OIP.YAXlTjvtEKchdMVc5laZhwHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="...">
+					</div>
+					<div class="port-img-info">
+						<h2>View project</h2>
+						<a href="#">
+							<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						</a>
+					</div>
+				</div>
+				<!-- image 6 -->
+
+				<div class="portfolio-item">
+					<div class="port-img-box">
+						<img src="https://th.bing.com/th?id=OIP.E4IJcali_762Oo_vNhhbFgHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="...">
+					</div>
+					<div class="port-img-info">
+						<h2>View project</h2>
+						<a href="#">
+							<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- service section -->
+	<section id="service">
+		<div class="container">
+			<h3 class="sub-title"><span>My</span> services</h3>
+			<div class="service-grid">
+
+				<!-- service 1 -->
+				<div class="service-item">
+					<i class="fa-solid fa-code"></i>
+					<h2>Web Design</h2>
+					<p>Lorem ipsum dolor sit elit, Quaerat non aut sapiente pariatur quia aperiam nobis doloribus suscipit ipsum quam.</p>
+				</div>
+
+				<!-- service 2 -->
+				<div class="service-item">
+					<i class="fa-solid fa-mobile-screen-button"></i>
+					<h2>Responsive design</h2>
+					<p>Lorem ipsum dolor sit elit, Quaerat non aut sapiente pariatur quia aperiam nobis doloribus suscipit ipsum quam.</p>
+				</div>
+
+				<!-- service 3 -->
+				<div class="service-item">
+					<i class="fa-solid fa-palette"></i>
+					<h2>graphic design</h2>
+					<p>Lorem ipsum dolor sit elit, Quaerat non aut sapiente pariatur quia aperiam nobis doloribus suscipit ipsum quam.</p>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+    <!-- contact us -->
+
+    <section id="contact">
+        <div class="container">
+            <h3 class="sub-title">Contact <span>Me</span></h3>
+            <div class="contact-cols">
+                <div class="con-top-col">
+                    <!-- Contact item 1 -->
+                    <div class="con-item">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                        <h2>Email</h2>
+                        <p>
+                            msani.xyz@gmail.com
+                        </p>
+                    </div>
+                    <!-- Contact item 2 -->
+                    <div class="con-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <h2>Phone</h2>
+                        <p>
+                            +91 307 35720
+                        </p>
+                    </div>
+                    <!-- Contact item 3 -->
+                    <div class="con-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h2>Address</h2>
+                        <p>
+                            maharashtra
+                        </p>
+                    </div>
+                </div>
+                <div class="con-bottom-col">
+                    <form action="">
+                        <input type="text" name="name" id="name" placeholder="your name">
+                        <input type="email" name="email" id="email" placeholder="your email">
+                        <input type="text" name="subject" id="subject" placeholder="subject">
+                        <textarea name="msg" id="msg" rows="7" placeholder="Your Message"></textarea>
+                        <input type="submit" value="Send Message">                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!-- footer -->
+    <section id="footer">
+        <p>&copy; CopyRight 2024 | Design by skg</p>
+    </section>
+	<!-- Main js file -->
+	<script type="text/javascript" src="script.js">
+	</script>
+
+	<!-- Font awesome js File -->
+	<script type="text/javascript" src="https://kit.fontawesome.com/aa5f332820.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
